@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery,min.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <script src="catalog.js"></script>
+</head>
+<body>
+
+
+
+<div class="jumbotron text-center container">
+  <h1>On this page you can see the list of games!</h1>
+  <p>And carry out add and delete operations.</p>
+  <button type="button" name="add" id="add" class="btn btn-success">Add new game</button>
+</div>
+
+<div class="container" id="list_of_game">
+
+</div>
+<div id = "user_dialog" title="Add Data">
+  <form method="post" id="user_form">
+    <div class="form-group">
+      <label>Enter the name of the game</label>
+      <input type="text" name = "name_of_game" id = "name_of_game" class = "form-control"/>
+      <span id="error_name_of_game" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label>Enter short description</label>
+      <textarea type="text" name="short_description" id="short_description" class="form-control" rows="3"></textarea>
+      <span id = "error_short_description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label>Enter full description</label>
+      <textarea type="text" name="full_description" id="full_description" class="form-control" rows="6"></textarea>
+      <span id = "error_full_description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label>Select image</label>
+      <input type="file" name="image_of_game" id="image_of_game" class="form-control-file border">
+      <span id = "error_image_of_game" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <input type="hidden" name="action" id="action" value="insert" />
+      <input type="hidden" name="hidden_id" id="hidden_id" />
+      <input type="submit" name="form_action" id="form_action" class="btn btn-info" value="Insert" />
+    </div>
+  </form>
+</div>
+
+<div id = "action_alert" title="Action">
+
+</div>
+
+<div id="delete_confirmation" title="Confirmation">
+  <p>Are you sure you want to Delete this data?</p>
+</div>
+</body>
+</html>
